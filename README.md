@@ -9,7 +9,7 @@ Storage: 60 GB available space
 Sound Card: Windows Compatible Audio Device
 Additional Notes:
 
-recomdedReq...
+recommendedReq...
 Requires a 64-bit processor and operating system
 OS: Windows 10/11
 Processor: INTEL CORE I7-8700K or AMD RYZEN 5 3600X
