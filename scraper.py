@@ -1,10 +1,20 @@
 from bs4 import BeautifulSoup
 import requests
 
-def get_requirements(url):
+
+def get_url()
+    page = requests.get("https://store.steampowered.com/search/suggest?term=str&f=games&cc=US&realm=1&l=english&v=17631244&excluded_content_descriptors[]=3&excluded_content_descriptors[]=4&use_store_query=1&use_search_spellcheck=1")
+    results = BeautifulSoup(page.content, "html.parser")
+    url = results.find("a")
+    return url
+
+
+def get_requirements(args):
     minVal={};
     recVal={};
-    page = requests.get(url);
+    print("LOLLLLLLLL:-----------------------------")
+    page = requests.get(get_url(args));
+    print(page.content)
     results = BeautifulSoup(page.content, "html.parser");
     print("min...");
     minimumReq = results.find_all("div",{"class":"game_area_sys_req_leftCol"});
@@ -32,4 +42,4 @@ def get_requirements(url):
                 recVal[key] = value
         print(recVal)
 
-    return {"min":minVal, "max": recVal};
+    return {"min":minVal, "recommended": recVal};
