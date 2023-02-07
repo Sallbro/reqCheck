@@ -96,8 +96,11 @@ Additional Notes:
     </div>
 </div>
 ```
+# url
+> https://store.steampowered.com/search/suggest?cc=IN&l=english&realm=1&origin=https:%2F%2Fstore.steampoweredcom&f=jsonfull&term=cs&require_type=game,software&excluded_content_descriptors[]=3excluded_content_descriptors[]=4
 
+#
 #### Contributers:
 
-Sallbro
-Skyhero-admin
+- Sallbro
+- Skyhero-admin
