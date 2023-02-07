@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log(navigator.userAgent);
+    </script>
+</head>
+<body>
+    <h1>System requirement!!!</h1>
+    {% for x in res %}
+        {% if res[x].__len__() > 1 %}
+            <h1>{{x}}</h1>
+            <ul>
+                {% for y in res[x] %}
+                    <li><span>{{y}}:</span>{{res[x][y]}}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endfor %}
+</body>
+</html>
