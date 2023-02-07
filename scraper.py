@@ -24,10 +24,13 @@ def get_requirements(suggestion_url):
     # print(results.prettify());
 
     print("\n minimum...")
-    test=results.find("div",{"class":"sysreq_contents"});
-    minimumReq = test.find_all(
-        "div", {"data-os": "win"},
-    )
+    minimumReq = results.find_all(
+        "div", {"class": "game_area_sys_req_leftCol"});
+    if len(minimumReq) == 0:
+        test = results.find("div", {"class": "sysreq_contents"})
+        minimumReq = test.find_all(
+            "div", {"data-os": "win"},
+        )
 
     for thing in minimumReq:
         i = thing.find_all("li")
